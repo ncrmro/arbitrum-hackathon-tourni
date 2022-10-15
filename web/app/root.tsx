@@ -88,7 +88,7 @@ const Layout = (props: { children: ReactElement }) => {
         </div>
         <footer>
           <p>
-            Copyright @ 2022 jtronics.exchange All rights reserved{" "}
+            Copyright @ 2022 Tourni All rights reserved{" "}
             <Link to="/help">Need Help?</Link>
           </p>
         </footer>
