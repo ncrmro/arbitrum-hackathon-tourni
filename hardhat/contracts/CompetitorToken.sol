@@ -3,10 +3,10 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
 
-contract GovernanceToken is ERC20Votes {
+contract CompetitorToken is ERC20Votes {
     constructor(
         uint256 s_contestCount
-    ) ERC20("GovernanceToken", "GT") ERC20Permit("GovernanceToken") {
+    ) ERC20("CompetitorToken", "CMPTK") ERC20Permit("CompetitorToken") {
         _mint(msg.sender, s_contestCount);
     }
 
