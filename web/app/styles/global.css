@@ -1,0 +1,170 @@
+/* https://material.io/design/color/the-color-system.html#color-theme-creation */
+:root {
+  font-family: Helvetica Neue, sans-serif;
+  --background: #121212;
+  --onBackground: #fff;
+  --surface: #000000;
+  --onSurface: #fff;
+  --onSurfaceRGB: 255, 255, 255;
+  --onPrimary: #000;
+  --primary: #36baa2;
+  --secondary: red;
+  /*Set text to white by default*/
+  color: var(--onBackground);
+}
+
+html,
+body,
+#outlet {
+  height: 100%;
+  width: 100%;
+  /*align-items: center;*/
+  background-color: var(--background);
+  margin: 0;
+}
+#container {
+  /*padding-top: 1em;*/
+  position: relative;
+  min-height: 100vh;
+  padding: 0 2em;
+}
+
+#outlet {
+  max-width: 1600px;
+  /*padding: 24px 8px;*/
+  margin-top: 2em;
+  padding-bottom: 4.5rem; /* Footer height */
+}
+
+#navbar {
+  background: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+#navbar div {
+  height: 100%;
+  display: flex;
+  align-content: center;
+}
+
+a {
+  color: var(--onSurface);
+}
+
+#navbar a {
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  padding: 0 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+#navbar a:active {
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  /*Sticky footer above */
+  display: flex;
+  justify-content: center;
+  background: var(--surface);
+}
+
+@media only screen and (max-width: 600px) {
+  .outlet {
+    width: 95%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--onBackground);
+  /*margin: 0;*/
+}
+
+button {
+  padding: 14px 0;
+  background-color: var(--primary);
+  width: 265px;
+  color: var(--onPrimary);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  border: 0;
+  border-radius: 4px;
+}
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.float-right {
+  float: right;
+}
+
+.gap-4 {
+  gap: 1em;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.justify-items-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+form {
+  /*use class if needs to be wider that this*/
+  max-width: 600px;
+  background: var(--surface);
+  gap: 1rem;
+}
+
+input {
+  padding: 12px 12px;
+}
+
+.stepper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.stepper li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.stepper-active-step {
+  border-bottom: solid;
+}
