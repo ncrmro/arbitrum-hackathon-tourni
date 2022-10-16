@@ -20,6 +20,7 @@ import componentStyles from "~/styles/components.css";
 import { json } from "@remix-run/node";
 
 import React from "react";
+import {useWalletConnect} from "~/utils/walletConnect";
 
 type LoaderData = {
   gaTrackingId: string | undefined;
@@ -99,6 +100,7 @@ const Layout = (props: { children: ReactElement }) => {
 
 export default function App(): ReactElement {
   const env = useLoaderData<LoaderData>();
+  const wc = useWalletConnect()
 
   return (
     <html lang="en">

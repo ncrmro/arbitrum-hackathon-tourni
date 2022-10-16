@@ -1,27 +1,23 @@
-import {GovernanceToken} from "../../typechain-types"
+import { Tournament } from "../../typechain-types"
 import {deployments, ethers} from "hardhat"
 import {assert, expect} from "chai"
-import {
-    FUNC,
-    PROPOSAL_DESCRIPTION,
-    NEW_STORE_VALUE,
-    VOTING_DELAY,
-    VOTING_PERIOD,
-    MIN_DELAY,
-} from "../../helper-hardhat-config"
-import {moveBlocks} from "../../utils/move-blocks"
-import {moveTime} from "../../utils/move-time"
 
-describe("Tournament Competitor Flow", async () => {
-    let governanceToken: GovernanceToken
+
+describe("Tournament Flow", async () => {
+    let tournament: Tournament
     beforeEach(async () => {
         await deployments.fixture(["all"])
-        governanceToken = await ethers.getContract("CompetitorToken")
+        tournament = await ethers.getContract("Tournament")
 
     })
 
-    it("can only be changed through governance", async () => {
-        console.log('ayee')
+    it("user can register", async () => {
+        const addresses = await ethers.getSigners();
+
+        await tournament.registerCompetitor(addresses[1].address)
+        await tournament.registerCompetitor(addresses[2].address)
+        console.log('ayee', tournament.competitors(1))
+
     })
     //
     // it("proposes, votes, waits, queues, and then executes", async () => {

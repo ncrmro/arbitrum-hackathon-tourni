@@ -1,3 +1,7 @@
+# Tourni
+
+Single Elimination
+
 # Why
 
 Arbitrum would like us to use their platform to build something cool
@@ -25,4 +29,12 @@ Battles brackets winner. S
 
 
 - Organizer creates a tournament with a organization wallet
-- 
+- Competitors get a single token
+  - This is how they enter
+  - Tokens are put up at the start of tournament
+  - Winner gets losers token
+
+
+# E2E
+
+Org
